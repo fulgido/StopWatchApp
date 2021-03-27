@@ -27,7 +27,7 @@
         <!--Players-->
         <scene sceneID="9bs-3P-s4s">
             <objects>
-                <viewController id="lzm-Yb-Kcn" sceneMemberID="viewController">
+                <viewController id="lzm-Yb-Kcn" customClass="PlayersViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bq5-wL-gf6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
