@@ -24,6 +24,8 @@
 		AD873736260F864700E0F5AD /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD873735260F864700E0F5AD /* PlayersViewController.swift */; };
 		AD87373F260F899D00E0F5AD /* EmpaticaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD87373E260F899D00E0F5AD /* EmpaticaPlayer.swift */; };
 		AD873747260F8BB700E0F5AD /* ParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD873746260F8BB700E0F5AD /* ParserManager.swift */; };
+		ADE23DBB260FC83800D75024 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE23DB9260FC83800D75024 /* PlayerTableViewCell.swift */; };
+		ADE23DBC260FC83800D75024 /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE23DBA260FC83800D75024 /* PlayerTableViewCell.xib */; };
 		FF5D90E854E183CD25357386 /* Pods_StopWatch_StopWatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BE387A2FFD01343375C366 /* Pods_StopWatch_StopWatchUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		AD873735260F864700E0F5AD /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		AD87373E260F899D00E0F5AD /* EmpaticaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpaticaPlayer.swift; sourceTree = "<group>"; };
 		AD873746260F8BB700E0F5AD /* ParserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserManager.swift; sourceTree = "<group>"; };
+		ADE23DB9260FC83800D75024 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		ADE23DBA260FC83800D75024 /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
 		E1BE387A2FFD01343375C366 /* Pods_StopWatch_StopWatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StopWatch_StopWatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48195EF3F82ABB0A7467714 /* Pods-StopWatch-StopWatchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StopWatch-StopWatchUITests.debug.xcconfig"; path = "Target Support Files/Pods-StopWatch-StopWatchUITests/Pods-StopWatch-StopWatchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1A05CF93E78CBF7A6FB9134 /* Pods_StopWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StopWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,9 +202,8 @@
 		AD87371D260F823700E0F5AD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				ADE23DC0260FC87800D75024 /* API */,
 				AD873727260F82B000E0F5AD /* NetworkManager.swift */,
-				AD87372C260F82E300E0F5AD /* RandomUser.swift */,
-				AD873746260F8BB700E0F5AD /* ParserManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -208,7 +211,8 @@
 		AD873734260F860D00E0F5AD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AD873735260F864700E0F5AD /* PlayersViewController.swift */,
+				ADE23DB8260FC77900D75024 /* LeaderBoard */,
+				ADE23DB7260FC76C00D75024 /* Players */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +223,32 @@
 				AD87373E260F899D00E0F5AD /* EmpaticaPlayer.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ADE23DB7260FC76C00D75024 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				AD873735260F864700E0F5AD /* PlayersViewController.swift */,
+				ADE23DB9260FC83800D75024 /* PlayerTableViewCell.swift */,
+				ADE23DBA260FC83800D75024 /* PlayerTableViewCell.xib */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		ADE23DB8260FC77900D75024 /* LeaderBoard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LeaderBoard;
+			sourceTree = "<group>";
+		};
+		ADE23DC0260FC87800D75024 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AD87372C260F82E300E0F5AD /* RandomUser.swift */,
+				AD873746260F8BB700E0F5AD /* ParserManager.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADE23DBC260FC83800D75024 /* PlayerTableViewCell.xib in Resources */,
 				AD056C162607F7F100F9D8FD /* LaunchScreen.storyboard in Resources */,
 				AD056C132607F7F100F9D8FD /* Assets.xcassets in Resources */,
 				AD056C0E2607F7F000F9D8FD /* Main.storyboard in Resources */,
@@ -466,6 +497,7 @@
 				AD8736F0260F72F800E0F5AD /* Extensions.swift in Sources */,
 				AD056C0B2607F7F000F9D8FD /* ViewController.swift in Sources */,
 				AD873747260F8BB700E0F5AD /* ParserManager.swift in Sources */,
+				ADE23DBB260FC83800D75024 /* PlayerTableViewCell.swift in Sources */,
 				AD873736260F864700E0F5AD /* PlayersViewController.swift in Sources */,
 				AD056C072607F7F000F9D8FD /* AppDelegate.swift in Sources */,
 				AD056C112607F7F000F9D8FD /* StopWatch.xcdatamodeld in Sources */,
