@@ -19,6 +19,11 @@
 		AD056C2C2607F7F100F9D8FD /* StopWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD056C2B2607F7F100F9D8FD /* StopWatchUITests.swift */; };
 		AD8736F0260F72F800E0F5AD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8736EF260F72F800E0F5AD /* Extensions.swift */; };
 		AD873719260F782400E0F5AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD873718260F782400E0F5AD /* SceneDelegate.swift */; };
+		AD873728260F82B000E0F5AD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD873727260F82B000E0F5AD /* NetworkManager.swift */; };
+		AD87372D260F82E300E0F5AD /* RandomUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD87372C260F82E300E0F5AD /* RandomUser.swift */; };
+		AD873736260F864700E0F5AD /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD873735260F864700E0F5AD /* PlayersViewController.swift */; };
+		AD87373F260F899D00E0F5AD /* EmpaticaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD87373E260F899D00E0F5AD /* EmpaticaPlayer.swift */; };
+		AD873747260F8BB700E0F5AD /* ParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD873746260F8BB700E0F5AD /* ParserManager.swift */; };
 		FF5D90E854E183CD25357386 /* Pods_StopWatch_StopWatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BE387A2FFD01343375C366 /* Pods_StopWatch_StopWatchUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +67,11 @@
 		AD056C2D2607F7F100F9D8FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD8736EF260F72F800E0F5AD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AD873718260F782400E0F5AD /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AD873727260F82B000E0F5AD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AD87372C260F82E300E0F5AD /* RandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser.swift; sourceTree = "<group>"; };
+		AD873735260F864700E0F5AD /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		AD87373E260F899D00E0F5AD /* EmpaticaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpaticaPlayer.swift; sourceTree = "<group>"; };
+		AD873746260F8BB700E0F5AD /* ParserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserManager.swift; sourceTree = "<group>"; };
 		E1BE387A2FFD01343375C366 /* Pods_StopWatch_StopWatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StopWatch_StopWatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48195EF3F82ABB0A7467714 /* Pods-StopWatch-StopWatchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StopWatch-StopWatchUITests.debug.xcconfig"; path = "Target Support Files/Pods-StopWatch-StopWatchUITests/Pods-StopWatch-StopWatchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1A05CF93E78CBF7A6FB9134 /* Pods_StopWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StopWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +153,8 @@
 		AD056C052607F7F000F9D8FD /* StopWatch */ = {
 			isa = PBXGroup;
 			children = (
+				AD87373D260F896400E0F5AD /* Model */,
+				AD873734260F860D00E0F5AD /* Controller */,
 				AD87371D260F823700E0F5AD /* Network */,
 				AD8736EE260F728400E0F5AD /* Utils */,
 				AD056C062607F7F000F9D8FD /* AppDelegate.swift */,
@@ -186,8 +198,27 @@
 		AD87371D260F823700E0F5AD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				AD873727260F82B000E0F5AD /* NetworkManager.swift */,
+				AD87372C260F82E300E0F5AD /* RandomUser.swift */,
+				AD873746260F8BB700E0F5AD /* ParserManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		AD873734260F860D00E0F5AD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD873735260F864700E0F5AD /* PlayersViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AD87373D260F896400E0F5AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD87373E260F899D00E0F5AD /* EmpaticaPlayer.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,9 +459,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD87373F260F899D00E0F5AD /* EmpaticaPlayer.swift in Sources */,
+				AD87372D260F82E300E0F5AD /* RandomUser.swift in Sources */,
+				AD873728260F82B000E0F5AD /* NetworkManager.swift in Sources */,
 				AD873719260F782400E0F5AD /* SceneDelegate.swift in Sources */,
 				AD8736F0260F72F800E0F5AD /* Extensions.swift in Sources */,
 				AD056C0B2607F7F000F9D8FD /* ViewController.swift in Sources */,
+				AD873747260F8BB700E0F5AD /* ParserManager.swift in Sources */,
+				AD873736260F864700E0F5AD /* PlayersViewController.swift in Sources */,
 				AD056C072607F7F000F9D8FD /* AppDelegate.swift in Sources */,
 				AD056C112607F7F000F9D8FD /* StopWatch.xcdatamodeld in Sources */,
 			);

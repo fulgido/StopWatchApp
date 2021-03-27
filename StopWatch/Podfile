@@ -18,5 +18,6 @@ target 'StopWatch' do
 
 pod 'Moya', '~> 14.0'
 pod 'Charts'
+pod 'SwiftyJSON'
 
 end
