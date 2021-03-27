@@ -10,6 +10,8 @@ import Foundation
 
 class PlayersViewController: UIViewController {
 
+    var playersArray : [EmpaticaPlayer] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,11 +23,8 @@ class PlayersViewController: UIViewController {
         NetworkManager.shared.provider.request(.empatica, completion: { result in
             switch result {
             case .success(let response):
-                do {
-                    print("Response empatica random players:", try response.mapJSON())
-                } catch {
-                    print("Error in response success:", error)
-                }
+                self.playersArray = ParserManager.shared.parsePlayersResponse(response)
+                print("Players:",self.playersArray)
             case .failure(let failure):
 //                TODO: show alert error
                 print("Request Error:", failure.errorDescription as Any)
