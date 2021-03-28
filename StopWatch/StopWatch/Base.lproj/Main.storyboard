@@ -47,6 +47,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Players" image="person.fill" catalog="system" id="BQ3-CF-tti"/>
+                    <connections>
+                        <outlet property="tablePlayers" destination="pwh-30-qhV" id="1nu-gj-kli"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyy-mh-tWx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
