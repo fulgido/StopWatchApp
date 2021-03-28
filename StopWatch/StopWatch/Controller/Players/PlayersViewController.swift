@@ -64,7 +64,21 @@ extension PlayersViewController: UITableViewDelegate, UITableViewDataSource {
         cell.playerLabel.text = playersArray[indexPath.row].name.first+" "+playersArray[indexPath.row].name.last
         cell.playerImage.sd_setImage(with: URL(string: playersArray[indexPath.row].picture.thumbnail), completed: nil)
         
+        cell.accessoryType = .disclosureIndicator
+        
         return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+//      TODO identify player by indexPathRow
+        var sessionVC : SessionViewController = storyboard?.instantiateViewController(identifier: "SessionViewController") as! SessionViewController
+        
+        sessionVC.playerSelected = playersArray[indexPath.row]
+        sessionVC.indexPlayer = indexPath.row
+        
+        self.navigationController?.pushViewController(sessionVC, animated: true)
         
     }
     

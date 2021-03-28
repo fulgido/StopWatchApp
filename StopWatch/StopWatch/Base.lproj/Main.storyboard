@@ -55,6 +55,21 @@
             </objects>
             <point key="canvasLocation" x="393" y="-192"/>
         </scene>
+        <!--Session View Controller-->
+        <scene sceneID="O6T-LJ-1og">
+            <objects>
+                <viewController storyboardIdentifier="SessionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pg5-53-R1C" customClass="SessionViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KaJ-zc-jhp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="G1Z-fn-aiC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yrq-92-Smi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="-192"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pJE-hh-mK2">
             <objects>

@@ -24,6 +24,9 @@
 		AD873736260F864700E0F5AD /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD873735260F864700E0F5AD /* PlayersViewController.swift */; };
 		AD87373F260F899D00E0F5AD /* EmpaticaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD87373E260F899D00E0F5AD /* EmpaticaPlayer.swift */; };
 		AD873747260F8BB700E0F5AD /* ParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD873746260F8BB700E0F5AD /* ParserManager.swift */; };
+		ADC6D7BD2610CE6C00219958 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6D7BC2610CE6C00219958 /* SessionViewController.swift */; };
+		ADC6D7C52610CEFD00219958 /* SessionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6D7C42610CEFD00219958 /* SessionPlayer.swift */; };
+		ADC6D7CA2610CF6200219958 /* SessionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6D7C92610CF6200219958 /* SessionsManager.swift */; };
 		ADE23DBB260FC83800D75024 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE23DB9260FC83800D75024 /* PlayerTableViewCell.swift */; };
 		ADE23DBC260FC83800D75024 /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE23DBA260FC83800D75024 /* PlayerTableViewCell.xib */; };
 		FF5D90E854E183CD25357386 /* Pods_StopWatch_StopWatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1BE387A2FFD01343375C366 /* Pods_StopWatch_StopWatchUITests.framework */; };
@@ -74,6 +77,9 @@
 		AD873735260F864700E0F5AD /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		AD87373E260F899D00E0F5AD /* EmpaticaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpaticaPlayer.swift; sourceTree = "<group>"; };
 		AD873746260F8BB700E0F5AD /* ParserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserManager.swift; sourceTree = "<group>"; };
+		ADC6D7BC2610CE6C00219958 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		ADC6D7C42610CEFD00219958 /* SessionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPlayer.swift; sourceTree = "<group>"; };
+		ADC6D7C92610CF6200219958 /* SessionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsManager.swift; sourceTree = "<group>"; };
 		ADE23DB9260FC83800D75024 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		ADE23DBA260FC83800D75024 /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
 		E1BE387A2FFD01343375C366 /* Pods_StopWatch_StopWatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StopWatch_StopWatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +163,7 @@
 		AD056C052607F7F000F9D8FD /* StopWatch */ = {
 			isa = PBXGroup;
 			children = (
+				AD056C0C2607F7F000F9D8FD /* Main.storyboard */,
 				AD87373D260F896400E0F5AD /* Model */,
 				AD873734260F860D00E0F5AD /* Controller */,
 				AD87371D260F823700E0F5AD /* Network */,
@@ -164,7 +171,6 @@
 				AD056C062607F7F000F9D8FD /* AppDelegate.swift */,
 				AD873718260F782400E0F5AD /* SceneDelegate.swift */,
 				AD056C0A2607F7F000F9D8FD /* ViewController.swift */,
-				AD056C0C2607F7F000F9D8FD /* Main.storyboard */,
 				AD056C122607F7F100F9D8FD /* Assets.xcassets */,
 				AD056C142607F7F100F9D8FD /* LaunchScreen.storyboard */,
 				AD056C172607F7F100F9D8FD /* Info.plist */,
@@ -194,6 +200,7 @@
 		AD8736EE260F728400E0F5AD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				ADC6D7C92610CF6200219958 /* SessionsManager.swift */,
 				AD8736EF260F72F800E0F5AD /* Extensions.swift */,
 			);
 			path = Utils;
@@ -211,6 +218,7 @@
 		AD873734260F860D00E0F5AD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ADC6D7BB2610CE5700219958 /* Session */,
 				ADE23DB8260FC77900D75024 /* LeaderBoard */,
 				ADE23DB7260FC76C00D75024 /* Players */,
 			);
@@ -221,8 +229,17 @@
 			isa = PBXGroup;
 			children = (
 				AD87373E260F899D00E0F5AD /* EmpaticaPlayer.swift */,
+				ADC6D7C42610CEFD00219958 /* SessionPlayer.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ADC6D7BB2610CE5700219958 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6D7BC2610CE6C00219958 /* SessionViewController.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		ADE23DB7260FC76C00D75024 /* Players */ = {
@@ -492,13 +509,16 @@
 			files = (
 				AD87373F260F899D00E0F5AD /* EmpaticaPlayer.swift in Sources */,
 				AD87372D260F82E300E0F5AD /* RandomUser.swift in Sources */,
+				ADC6D7CA2610CF6200219958 /* SessionsManager.swift in Sources */,
 				AD873728260F82B000E0F5AD /* NetworkManager.swift in Sources */,
+				ADC6D7C52610CEFD00219958 /* SessionPlayer.swift in Sources */,
 				AD873719260F782400E0F5AD /* SceneDelegate.swift in Sources */,
 				AD8736F0260F72F800E0F5AD /* Extensions.swift in Sources */,
 				AD056C0B2607F7F000F9D8FD /* ViewController.swift in Sources */,
 				AD873747260F8BB700E0F5AD /* ParserManager.swift in Sources */,
 				ADE23DBB260FC83800D75024 /* PlayerTableViewCell.swift in Sources */,
 				AD873736260F864700E0F5AD /* PlayersViewController.swift in Sources */,
+				ADC6D7BD2610CE6C00219958 /* SessionViewController.swift in Sources */,
 				AD056C072607F7F000F9D8FD /* AppDelegate.swift in Sources */,
 				AD056C112607F7F000F9D8FD /* StopWatch.xcdatamodeld in Sources */,
 			);
