@@ -62,13 +62,38 @@
                     <view key="view" contentMode="scaleToFill" id="KaJ-zc-jhp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StX-G8-wxR">
+                                <rect key="frame" x="6" y="56" width="402" height="219"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6km-ub-qBd">
+                                <rect key="frame" x="0.0" y="275" width="414" height="587"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="587" id="NCI-6h-Xnt"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="G1Z-fn-aiC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G1Z-fn-aiC" firstAttribute="trailing" secondItem="StX-G8-wxR" secondAttribute="trailing" constant="6" id="6Ki-hh-Ac3"/>
+                            <constraint firstItem="StX-G8-wxR" firstAttribute="leading" secondItem="G1Z-fn-aiC" secondAttribute="leading" constant="6" id="6b1-Yg-7mr"/>
+                            <constraint firstItem="StX-G8-wxR" firstAttribute="top" secondItem="G1Z-fn-aiC" secondAttribute="top" constant="12" id="ZfI-MF-SS9"/>
+                            <constraint firstItem="6km-ub-qBd" firstAttribute="bottom" secondItem="G1Z-fn-aiC" secondAttribute="bottom" id="gYY-1Q-H35"/>
+                            <constraint firstItem="6km-ub-qBd" firstAttribute="trailing" secondItem="G1Z-fn-aiC" secondAttribute="trailing" id="n7G-aK-9kz"/>
+                            <constraint firstItem="6km-ub-qBd" firstAttribute="top" secondItem="StX-G8-wxR" secondAttribute="bottom" id="rtQ-Za-Zgp"/>
+                            <constraint firstItem="6km-ub-qBd" firstAttribute="leading" secondItem="G1Z-fn-aiC" secondAttribute="leading" id="vZj-7F-Di1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tablePlayerSession" destination="6km-ub-qBd" id="IDy-BV-HZM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrq-92-Smi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380" y="-192"/>
+            <point key="canvasLocation" x="1378.2608695652175" y="-192.1875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pJE-hh-mK2">

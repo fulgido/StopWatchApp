@@ -11,8 +11,9 @@ import SDWebImage
 
 class PlayersViewController: UIViewController {
 
-    var playersArray : [EmpaticaPlayer] = []
     @IBOutlet weak var tablePlayers: UITableView!
+    
+    let sessionsManager = SessionsManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +30,9 @@ class PlayersViewController: UIViewController {
         NetworkManager.shared.provider.request(.empatica, completion: { result in
             switch result {
             case .success(let response):
-                self.playersArray = ParserManager.shared.parsePlayersResponse(response)
-                print("Players:",self.playersArray)
+                self.sessionsManager.players = ParserManager.shared.parsePlayersResponse(response)
+                print("Players:",self.sessionsManager.players)
+                
                 self.tablePlayers.reloadData()
             case .failure(let failure):
 //                TODO: show alert error
@@ -40,7 +42,7 @@ class PlayersViewController: UIViewController {
     }
 
 }
-//MARK: Delegate
+//MARK: Delegate e DataSource
 
 extension PlayersViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -54,15 +56,15 @@ extension PlayersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return playersArray.count
+        return self.sessionsManager.players.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerTableViewCell", for: indexPath) as! PlayerTableViewCell
         
-        cell.playerLabel.text = playersArray[indexPath.row].name.first+" "+playersArray[indexPath.row].name.last
-        cell.playerImage.sd_setImage(with: URL(string: playersArray[indexPath.row].picture.thumbnail), completed: nil)
+        cell.playerLabel.text = self.sessionsManager.players[indexPath.row].name.first+" "+self.sessionsManager.players[indexPath.row].name.last
+        cell.playerImage.sd_setImage(with: URL(string: self.sessionsManager.players[indexPath.row].picture.thumbnail), completed: nil)
         
         cell.accessoryType = .disclosureIndicator
         
@@ -72,10 +74,9 @@ extension PlayersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//      TODO identify player by indexPathRow
         var sessionVC : SessionViewController = storyboard?.instantiateViewController(identifier: "SessionViewController") as! SessionViewController
         
-        sessionVC.playerSelected = playersArray[indexPath.row]
+        sessionVC.playerSelected = self.sessionsManager.players[indexPath.row]
         sessionVC.indexPlayer = indexPath.row
         
         self.navigationController?.pushViewController(sessionVC, animated: true)

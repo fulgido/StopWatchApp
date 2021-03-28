@@ -17,6 +17,8 @@
 		AD056C162607F7F100F9D8FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD056C142607F7F100F9D8FD /* LaunchScreen.storyboard */; };
 		AD056C212607F7F100F9D8FD /* StopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD056C202607F7F100F9D8FD /* StopWatchTests.swift */; };
 		AD056C2C2607F7F100F9D8FD /* StopWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD056C2B2607F7F100F9D8FD /* StopWatchUITests.swift */; };
+		AD638292261116CF00F50CD9 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD638290261116CF00F50CD9 /* SessionTableViewCell.swift */; };
+		AD638293261116CF00F50CD9 /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD638291261116CF00F50CD9 /* SessionTableViewCell.xib */; };
 		AD8736F0260F72F800E0F5AD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8736EF260F72F800E0F5AD /* Extensions.swift */; };
 		AD873719260F782400E0F5AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD873718260F782400E0F5AD /* SceneDelegate.swift */; };
 		AD873728260F82B000E0F5AD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD873727260F82B000E0F5AD /* NetworkManager.swift */; };
@@ -25,7 +27,7 @@
 		AD87373F260F899D00E0F5AD /* EmpaticaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD87373E260F899D00E0F5AD /* EmpaticaPlayer.swift */; };
 		AD873747260F8BB700E0F5AD /* ParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD873746260F8BB700E0F5AD /* ParserManager.swift */; };
 		ADC6D7BD2610CE6C00219958 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6D7BC2610CE6C00219958 /* SessionViewController.swift */; };
-		ADC6D7C52610CEFD00219958 /* SessionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6D7C42610CEFD00219958 /* SessionPlayer.swift */; };
+		ADC6D7C52610CEFD00219958 /* PlayerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6D7C42610CEFD00219958 /* PlayerSession.swift */; };
 		ADC6D7CA2610CF6200219958 /* SessionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6D7C92610CF6200219958 /* SessionsManager.swift */; };
 		ADE23DBB260FC83800D75024 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE23DB9260FC83800D75024 /* PlayerTableViewCell.swift */; };
 		ADE23DBC260FC83800D75024 /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE23DBA260FC83800D75024 /* PlayerTableViewCell.xib */; };
@@ -70,6 +72,8 @@
 		AD056C272607F7F100F9D8FD /* StopWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD056C2B2607F7F100F9D8FD /* StopWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchUITests.swift; sourceTree = "<group>"; };
 		AD056C2D2607F7F100F9D8FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD638290261116CF00F50CD9 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
+		AD638291261116CF00F50CD9 /* SessionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
 		AD8736EF260F72F800E0F5AD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AD873718260F782400E0F5AD /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AD873727260F82B000E0F5AD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -78,7 +82,7 @@
 		AD87373E260F899D00E0F5AD /* EmpaticaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpaticaPlayer.swift; sourceTree = "<group>"; };
 		AD873746260F8BB700E0F5AD /* ParserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserManager.swift; sourceTree = "<group>"; };
 		ADC6D7BC2610CE6C00219958 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
-		ADC6D7C42610CEFD00219958 /* SessionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPlayer.swift; sourceTree = "<group>"; };
+		ADC6D7C42610CEFD00219958 /* PlayerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSession.swift; sourceTree = "<group>"; };
 		ADC6D7C92610CF6200219958 /* SessionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsManager.swift; sourceTree = "<group>"; };
 		ADE23DB9260FC83800D75024 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		ADE23DBA260FC83800D75024 /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
@@ -229,7 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				AD87373E260F899D00E0F5AD /* EmpaticaPlayer.swift */,
-				ADC6D7C42610CEFD00219958 /* SessionPlayer.swift */,
+				ADC6D7C42610CEFD00219958 /* PlayerSession.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				ADC6D7BC2610CE6C00219958 /* SessionViewController.swift */,
+				AD638290261116CF00F50CD9 /* SessionTableViewCell.swift */,
+				AD638291261116CF00F50CD9 /* SessionTableViewCell.xib */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD638293261116CF00F50CD9 /* SessionTableViewCell.xib in Resources */,
 				ADE23DBC260FC83800D75024 /* PlayerTableViewCell.xib in Resources */,
 				AD056C162607F7F100F9D8FD /* LaunchScreen.storyboard in Resources */,
 				AD056C132607F7F100F9D8FD /* Assets.xcassets in Resources */,
@@ -511,7 +518,7 @@
 				AD87372D260F82E300E0F5AD /* RandomUser.swift in Sources */,
 				ADC6D7CA2610CF6200219958 /* SessionsManager.swift in Sources */,
 				AD873728260F82B000E0F5AD /* NetworkManager.swift in Sources */,
-				ADC6D7C52610CEFD00219958 /* SessionPlayer.swift in Sources */,
+				ADC6D7C52610CEFD00219958 /* PlayerSession.swift in Sources */,
 				AD873719260F782400E0F5AD /* SceneDelegate.swift in Sources */,
 				AD8736F0260F72F800E0F5AD /* Extensions.swift in Sources */,
 				AD056C0B2607F7F000F9D8FD /* ViewController.swift in Sources */,
@@ -519,6 +526,7 @@
 				ADE23DBB260FC83800D75024 /* PlayerTableViewCell.swift in Sources */,
 				AD873736260F864700E0F5AD /* PlayersViewController.swift in Sources */,
 				ADC6D7BD2610CE6C00219958 /* SessionViewController.swift in Sources */,
+				AD638292261116CF00F50CD9 /* SessionTableViewCell.swift in Sources */,
 				AD056C072607F7F000F9D8FD /* AppDelegate.swift in Sources */,
 				AD056C112607F7F000F9D8FD /* StopWatch.xcdatamodeld in Sources */,
 			);

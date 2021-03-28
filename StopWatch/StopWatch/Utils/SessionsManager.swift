@@ -7,9 +7,18 @@
 
 import Foundation
 
-//I need a singleton to save player's single sessions, in this first protoype of the app
+//In this first protoype of the app, I need a singleton to save player's single session
 class SessionsManager {
     
     static let shared : SessionsManager = SessionsManager()
+
+//  Players
+    var players : [EmpaticaPlayer] = []
+
+//  All players Sessions
+    var playersSessions : [[PlayerSession]] = [[]]
+    
+//  Sessions of a single Player
+    var playerSessions : [PlayerSession] = []
     
 }
