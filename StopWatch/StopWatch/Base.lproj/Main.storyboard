@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -63,31 +64,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StX-G8-wxR">
-                                <rect key="frame" x="6" y="56" width="402" height="219"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6km-ub-qBd">
-                                <rect key="frame" x="0.0" y="275" width="414" height="587"/>
+                                <rect key="frame" x="0.0" y="290" width="414" height="572"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="587" id="NCI-6h-Xnt"/>
-                                </constraints>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kI8-F8-88i" userLabel="Coach Commands">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAQ-am-X79" userLabel="Play / Pause">
+                                        <rect key="frame" x="187" y="28" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="DS2-nt-p7r"/>
+                                            <constraint firstAttribute="width" constant="40" id="J73-8y-XxE"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="play.fill" catalog="system">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="msd-Fs-VDI" userLabel="Distance">
+                                        <rect key="frame" x="12" y="26" width="97" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="2Gd-ub-vQB"/>
+                                            <constraint firstAttribute="width" constant="97" id="LUd-lO-j2W"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wT5-TY-lJu" userLabel="Clear / Lap">
+                                        <rect key="frame" x="330" y="28" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Ofk-Pv-436"/>
+                                            <constraint firstAttribute="height" constant="40" id="xKi-dg-ZCJ"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="clear.fill" catalog="system" symbolScale="large"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="E8i-q0-VyR"/>
+                                    <constraint firstItem="CAQ-am-X79" firstAttribute="centerX" secondItem="kI8-F8-88i" secondAttribute="centerX" id="bvZ-bT-bQc"/>
+                                    <constraint firstItem="wT5-TY-lJu" firstAttribute="centerY" secondItem="CAQ-am-X79" secondAttribute="centerY" id="gal-ic-5Ln"/>
+                                    <constraint firstItem="msd-Fs-VDI" firstAttribute="centerY" secondItem="CAQ-am-X79" secondAttribute="centerY" id="gd5-IA-1Vy"/>
+                                    <constraint firstAttribute="trailing" secondItem="wT5-TY-lJu" secondAttribute="trailing" constant="44" id="n3C-h6-3nG"/>
+                                    <constraint firstItem="CAQ-am-X79" firstAttribute="centerY" secondItem="kI8-F8-88i" secondAttribute="centerY" id="sF6-nA-Lpv"/>
+                                    <constraint firstItem="msd-Fs-VDI" firstAttribute="leading" secondItem="kI8-F8-88i" secondAttribute="leading" constant="12" id="xS2-Dt-2qu"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StX-G8-wxR" userLabel="Chart" customClass="ChartMarkerView">
+                                <rect key="frame" x="0.0" y="140" width="414" height="150"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="fEV-d1-oQ1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G1Z-fn-aiC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="G1Z-fn-aiC" firstAttribute="trailing" secondItem="StX-G8-wxR" secondAttribute="trailing" constant="6" id="6Ki-hh-Ac3"/>
-                            <constraint firstItem="StX-G8-wxR" firstAttribute="leading" secondItem="G1Z-fn-aiC" secondAttribute="leading" constant="6" id="6b1-Yg-7mr"/>
-                            <constraint firstItem="StX-G8-wxR" firstAttribute="top" secondItem="G1Z-fn-aiC" secondAttribute="top" constant="12" id="ZfI-MF-SS9"/>
-                            <constraint firstItem="6km-ub-qBd" firstAttribute="bottom" secondItem="G1Z-fn-aiC" secondAttribute="bottom" id="gYY-1Q-H35"/>
-                            <constraint firstItem="6km-ub-qBd" firstAttribute="trailing" secondItem="G1Z-fn-aiC" secondAttribute="trailing" id="n7G-aK-9kz"/>
-                            <constraint firstItem="6km-ub-qBd" firstAttribute="top" secondItem="StX-G8-wxR" secondAttribute="bottom" id="rtQ-Za-Zgp"/>
-                            <constraint firstItem="6km-ub-qBd" firstAttribute="leading" secondItem="G1Z-fn-aiC" secondAttribute="leading" id="vZj-7F-Di1"/>
+                            <constraint firstItem="kI8-F8-88i" firstAttribute="top" secondItem="G1Z-fn-aiC" secondAttribute="top" id="27D-rm-Jfy"/>
+                            <constraint firstItem="kI8-F8-88i" firstAttribute="top" secondItem="G1Z-fn-aiC" secondAttribute="top" id="3Xl-bT-VzJ"/>
+                            <constraint firstItem="6km-ub-qBd" firstAttribute="top" secondItem="StX-G8-wxR" secondAttribute="bottom" id="3s8-rx-xIX"/>
+                            <constraint firstItem="G1Z-fn-aiC" firstAttribute="trailing" secondItem="StX-G8-wxR" secondAttribute="trailing" id="6Ki-hh-Ac3"/>
+                            <constraint firstItem="StX-G8-wxR" firstAttribute="leading" secondItem="G1Z-fn-aiC" secondAttribute="leading" id="6b1-Yg-7mr"/>
+                            <constraint firstItem="G1Z-fn-aiC" firstAttribute="trailing" secondItem="kI8-F8-88i" secondAttribute="trailing" id="Par-EY-eZZ"/>
+                            <constraint firstItem="6km-ub-qBd" firstAttribute="bottom" secondItem="G1Z-fn-aiC" secondAttribute="bottom" id="VR5-ZF-FHZ"/>
+                            <constraint firstItem="StX-G8-wxR" firstAttribute="top" secondItem="kI8-F8-88i" secondAttribute="bottom" id="Y0t-fL-prb"/>
+                            <constraint firstItem="6km-ub-qBd" firstAttribute="leading" secondItem="G1Z-fn-aiC" secondAttribute="leading" id="fFf-iN-ffV"/>
+                            <constraint firstItem="6km-ub-qBd" firstAttribute="trailing" secondItem="G1Z-fn-aiC" secondAttribute="trailing" id="mm2-bT-KsC"/>
+                            <constraint firstItem="kI8-F8-88i" firstAttribute="leading" secondItem="G1Z-fn-aiC" secondAttribute="leading" id="q5p-if-nCA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="chartView" destination="StX-G8-wxR" id="tOf-9U-t5E"/>
+                        <outlet property="clearLapButton" destination="wT5-TY-lJu" id="XdS-Pg-tgq"/>
+                        <outlet property="distanceField" destination="msd-Fs-VDI" id="849-Tm-nza"/>
+                        <outlet property="playPauseButton" destination="CAQ-am-X79" id="fo4-CY-lfu"/>
                         <outlet property="tablePlayerSession" destination="6km-ub-qBd" id="IDy-BV-HZM"/>
                     </connections>
                 </viewController>
@@ -139,7 +195,12 @@
     </scenes>
     <resources>
         <image name="chart.bar.doc.horizontal" catalog="system" width="115" height="128"/>
+        <image name="clear.fill" catalog="system" width="128" height="114"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

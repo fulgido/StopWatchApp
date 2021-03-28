@@ -6,8 +6,16 @@
 //
 
 import UIKit
+import Charts
 
 class SessionViewController: UIViewController {
+    
+    @IBOutlet weak var distanceField: UITextField!
+    @IBOutlet weak var playPauseButton: UIButton!
+    @IBOutlet weak var clearLapButton: UIButton!
+    
+    
+    @IBOutlet weak var chartView: MarkerView!
     
     @IBOutlet weak var tablePlayerSession: UITableView!
     
@@ -22,12 +30,18 @@ class SessionViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupNavigationBar()
         setupTable()
+        setupChart()
     }
     
     func setupNavigationBar() {
         let playerName = playerSelected?.name.first
         self.navigationItem.title = playerName
         self.navigationItem.backButtonTitle = ""
+    }
+    
+    func setupChart() {
+        self.chartView.layer.borderWidth = 1.0
+        self.chartView.layer.borderColor = UIColor.black.cgColor
     }
 
 }
