@@ -11,13 +11,16 @@ import Charts
 class SessionViewController: UIViewController {
     
     @IBOutlet weak var distanceField: UITextField!
-    @IBOutlet weak var playPauseButton: UIButton!
+    @IBOutlet weak var playStopButton: UIButton!
     @IBOutlet weak var clearLapButton: UIButton!
-    
     
     @IBOutlet weak var chartView: MarkerView!
     
     @IBOutlet weak var tablePlayerSession: UITableView!
+    
+    var isSessionStarted : Bool = false
+    
+//  TODO: create a timer
     
     let sessionsManager = SessionsManager.shared
     
@@ -43,7 +46,24 @@ class SessionViewController: UIViewController {
         self.chartView.layer.borderWidth = 1.0
         self.chartView.layer.borderColor = UIColor.black.cgColor
     }
-
+    
+    @IBAction func playStopAction(_ sender: Any) {
+//        TODO: change icon when pressed
+//        TODO: check id distance is != empty && is a number
+        if isSessionStarted {
+//            TODO: stop session
+        } else {
+//            TODO: start session - start timer
+        }
+    }
+    
+    @IBAction func clearLapAction(_ sender: Any) {
+        if isSessionStarted {
+//            TODO: lapAction
+        } else {
+//            TODO: clearAction
+        }
+    }
 }
 
 //MARK: Delegate

@@ -71,7 +71,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kI8-F8-88i" userLabel="Coach Commands">
                                 <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAQ-am-X79" userLabel="Play / Pause">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAQ-am-X79" userLabel="Play / Stop">
                                         <rect key="frame" x="187" y="28" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="DS2-nt-p7r"/>
@@ -82,6 +82,9 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="playStopAction:" destination="Pg5-53-R1C" eventType="touchUpInside" id="CyX-vu-kIf"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distance" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="msd-Fs-VDI" userLabel="Distance">
                                         <rect key="frame" x="12" y="26" width="97" height="44"/>
@@ -102,6 +105,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="clear.fill" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clearLapAction:" destination="Pg5-53-R1C" eventType="touchUpInside" id="eLA-T0-YjG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -143,7 +149,7 @@
                         <outlet property="chartView" destination="StX-G8-wxR" id="tOf-9U-t5E"/>
                         <outlet property="clearLapButton" destination="wT5-TY-lJu" id="XdS-Pg-tgq"/>
                         <outlet property="distanceField" destination="msd-Fs-VDI" id="849-Tm-nza"/>
-                        <outlet property="playPauseButton" destination="CAQ-am-X79" id="fo4-CY-lfu"/>
+                        <outlet property="playStopButton" destination="CAQ-am-X79" id="fo4-CY-lfu"/>
                         <outlet property="tablePlayerSession" destination="6km-ub-qBd" id="IDy-BV-HZM"/>
                     </connections>
                 </viewController>
